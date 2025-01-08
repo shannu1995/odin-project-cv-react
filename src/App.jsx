@@ -6,9 +6,9 @@ import GeneralInfo from './components/GeneralInfo';
 function App() {
   
   return (
-    <>
+    <div className='left-align'>
       <GeneralInfo/>
-    </>
+    </div>
   )
 }
 

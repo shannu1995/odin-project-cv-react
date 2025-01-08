@@ -44,7 +44,7 @@
   color: #888;
 }
 
-left-align {
+.left-align {
   align-self: flex-start;
 }
 
