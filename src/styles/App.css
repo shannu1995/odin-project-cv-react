@@ -1,11 +1,13 @@
 #root {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .logo {
@@ -54,4 +56,13 @@
 
 .center-align {
   align-self: center;
+  width: 100%;
+  max-width: 1200px;          
+}
+
+.wrapper {
+  display: flex;         /* Align children horizontally */
+  align-items: center;   /* Vertically center the items */
+  justify-content: center; /* Center horizontally within the wrapper (optional) */
+  gap: 1rem;             /* Adds spacing between the elements */
 }

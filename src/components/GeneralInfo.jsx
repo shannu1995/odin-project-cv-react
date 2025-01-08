@@ -9,8 +9,8 @@ function GeneralInfo({name = "John Smith", email = "John.Smith321sfa@gmail.com",
                 <h1>{info.name}</h1>
                 <h2>{info.email}</h2>
                 <h2>{info.phone}</h2>
-                <button type='button'>Edit</button>
             </div>
+            <button type='button' className='right-align'>Edit</button>
         </>
     );
 };
