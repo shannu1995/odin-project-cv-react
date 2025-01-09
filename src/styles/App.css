@@ -60,9 +60,8 @@
   max-width: 1200px;          
 }
 
-.wrapper {
-  display: flex;         /* Align children horizontally */
-  align-items: center;   /* Vertically center the items */
-  justify-content: center; /* Center horizontally within the wrapper (optional) */
-  gap: 1rem;             /* Adds spacing between the elements */
+.block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
