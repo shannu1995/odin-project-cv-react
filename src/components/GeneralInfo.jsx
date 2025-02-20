@@ -48,13 +48,3 @@ function GeneralInfo({name = "John Smith", email = "John.Smith321sfa@gmail.com",
 };
 
 export default GeneralInfo;
-
-function test(){
-    <>
-     {!isEditing ?(
-        <h1>Not Editing</h1>
-     ):(
-        <h1>Editing</h1>
-     )}
-    </>
-};
