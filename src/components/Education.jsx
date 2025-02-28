@@ -65,7 +65,7 @@ function Education(){
                 </>
             ) : (
                 <>
-                    <button onClick={resetEducations}>Edit</button>
+                    <button onClick={resetEducations}>Reset & Add New</button>
                     {savedEducations.length > 0 && (
                         <div>
                             <h2>Education</h2>

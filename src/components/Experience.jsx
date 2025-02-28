@@ -5,6 +5,7 @@ function Experience(){
     const [experiences, setExperiences] = useState([]);
     const [savedExperiences, setSavedExperiences] = useState([]);
     const [isSaved, setIsSaved] = useState(false);
+    const [isEditing, setIsEditing] = useState(false);
 
     const addExperience = () => {
         setExperiences([...experiences, { jobTitle: "", company: "", fromYear: "", toYear: "", description: "" }]);
@@ -23,7 +24,12 @@ function Experience(){
 
     const saveExperiences = () => {
         setSavedExperiences(experiences);
+        setIsEditing(false); // Hide the form
         setIsSaved(true); // Hide the form
+    };
+
+    const handleEditButton = () => {
+        setIsEditing(true); 
     };
 
     const resetExperiences = () => {
@@ -34,7 +40,7 @@ function Experience(){
 
     return (
         <div>
-            {!isSaved ? (
+            {(!isSaved | isEditing) ? (
                 <>
                     <button onClick={addExperience}>Add Experience</button>
                     {experiences.length > 0 && <button onClick={saveExperiences}>Save</button>}
@@ -78,7 +84,7 @@ function Experience(){
                 </>
             ) : (
                 <div>
-                    <h2>Saved Experiences</h2>
+                    <h2>Work Experiences</h2>
                     {savedExperiences.map((exp, index) => (
                         <div key={index} className="saved-experience">
                             <h3>{exp.jobTitle} at {exp.company}</h3>
@@ -87,6 +93,7 @@ function Experience(){
                         </div>
                     ))}
                     <button onClick={resetExperiences}>Reset & Add New</button>
+                    <button onClick={handleEditButton}>Edit</button>
                 </div>
             )}
         </div>
