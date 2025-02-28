@@ -60,6 +60,10 @@
   max-width: 1200px;          
 }
 
+.center-align_b {
+  align-self: center; 
+}
+
 .block {
   display: flex;
   justify-content: space-between;

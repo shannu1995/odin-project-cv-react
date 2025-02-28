@@ -30,7 +30,7 @@ function GeneralInfo({name = "John Smith", email = "John.Smith321sfa@gmail.com",
                     <h2>{info.email}</h2>
                     <h2>{info.phone}</h2>
                 </div>
-                <button type='button' className='right-align' onClick={handleEditButton}>Edit</button>
+                <button type='button' className='center-align_b' onClick={handleEditButton}>Edit</button>
             </>
             ):(
             <>

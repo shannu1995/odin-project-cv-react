@@ -5,6 +5,7 @@ function Education(){
     const [educations, setEducations] = useState([]);
     const [savedEducations, setSavedEducations] = useState([]);
     const [isSaved, setIsSaved] = useState(false);
+    const [isEditing, setIsEditing] = useState(false);
     const addEducation = () =>{
         setEducations([...educations, { school: "", degree: "", fromYear: "", toYear: "" }]);
     ;}
@@ -20,15 +21,20 @@ function Education(){
     const saveEducations = () => {
         setSavedEducations(educations);
         setIsSaved(true);
+        setIsEditing(false);
     };
     const resetEducations = () => {
         setEducations([]);
         setSavedEducations([]);
         setIsSaved(false);
     };
+    const handleEditButton = () => {
+        setIsEditing(true);
+    };
+
     return (
         <div>
-            {!isSaved ? (
+            {(!isSaved | isEditing) ? (
                 <>
                     <button onClick={addEducation}>Add Education</button>
                     {educations.length > 0 && <button onClick={saveEducations}>Save</button>}
@@ -66,6 +72,7 @@ function Education(){
             ) : (
                 <>
                     <button onClick={resetEducations}>Reset & Add New</button>
+                    <button onClick={handleEditButton}>Edit</button>
                     {savedEducations.length > 0 && (
                         <div>
                             <h2>Education</h2>
